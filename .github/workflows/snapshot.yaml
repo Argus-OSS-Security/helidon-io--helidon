@@ -15,13 +15,14 @@
 
 name: "Snapshot Release"
 
-on:
-  workflow_dispatch:
-  push:
-    branches:
-      - 'main'
-      - 'helidon-*.x'
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#   push:
+#     branches:
+#       - 'main'
+#       - 'helidon-*.x'
+# 
 env:
   MVN_VERSION: 3.9.9
   JAVA_VERSION: 27

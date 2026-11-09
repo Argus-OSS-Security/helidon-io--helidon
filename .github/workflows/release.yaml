@@ -15,10 +15,11 @@
 
 name: "Release"
 
-on:
-  push:
-    branches: [ 'release-*' ]
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   push:
+#     branches: [ 'release-*' ]
+# 
 env:
   MVN_VERSION: 3.9.9
   JAVA_VERSION: 27

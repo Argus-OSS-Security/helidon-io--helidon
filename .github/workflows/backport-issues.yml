@@ -15,34 +15,35 @@
 
 name: Create Backport Issues
 
-on:
-  workflow_dispatch:
-    inputs:
-      issue:
-        description: 'Issue number'
-        required: true
-      version:
-        description: 'Helidon version this issue was reported for'
-        required: true
-        type: choice
-        options:
-          - 2.x
-          - 3.x
-          - 4.x
-        default: '2.x'
-      target-2:
-        type: boolean
-        description: 'Port to 2.x?'
-        default:  false
-      target-3:
-        type: boolean
-        description: 'Port to 3.x?'
-        default: true
-      target-4:
-        type: boolean
-        description: 'Port to 4.x?'
-        default: true
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   workflow_dispatch:
+#     inputs:
+#       issue:
+#         description: 'Issue number'
+#         required: true
+#       version:
+#         description: 'Helidon version this issue was reported for'
+#         required: true
+#         type: choice
+#         options:
+#           - 2.x
+#           - 3.x
+#           - 4.x
+#         default: '2.x'
+#       target-2:
+#         type: boolean
+#         description: 'Port to 2.x?'
+#         default:  false
+#       target-3:
+#         type: boolean
+#         description: 'Port to 3.x?'
+#         default: true
+#       target-4:
+#         type: boolean
+#         description: 'Port to 4.x?'
+#         default: true
+# 
 env:
   GITHUB_API_KEY: ${{ secrets.GITHUB_TOKEN }}
 

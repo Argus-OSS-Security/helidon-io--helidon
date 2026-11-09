@@ -15,19 +15,20 @@
 
 name: "Validate"
 
-on:
-  pull_request:
-  push:
-    branches-ignore: [ 'main', 'helidon-*.x', 'release-*' ]
-    tags-ignore: [ '**' ]
-  workflow_call:
-    inputs:
-      ref:
-        description: The branch, tag or SHA to checkout
-        required: false
-        type: string
-        default: ''
-
+# Triggers intentionally disabled for Argus-OSS-Security.
+# on:
+#   pull_request:
+#   push:
+#     branches-ignore: [ 'main', 'helidon-*.x', 'release-*' ]
+#     tags-ignore: [ '**' ]
+#   workflow_call:
+#     inputs:
+#       ref:
+#         description: The branch, tag or SHA to checkout
+#         required: false
+#         type: string
+#         default: ''
+# 
 env:
   MVN_VERSION: 3.9.9
   JAVA_VERSION: 27
